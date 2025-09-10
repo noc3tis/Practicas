@@ -15,13 +15,19 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.Button
 import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.MaterialTheme
+import androidx.compose.material3.OutlinedButton
 import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
 import androidx.compose.material3.TextField
 import androidx.compose.material3.contentColorFor
+import androidx.compose.material3.rememberTopAppBarState
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.remember
+import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.style.TextAlign
@@ -54,15 +60,19 @@ class MainActivity : ComponentActivity() {
 @Preview(showBackground = true)
 @Composable
 fun Practica() {
+    var texto = ""
     val context = LocalContext.current
+    var valora by remember { mutableStateOf("") }
+    var valorb by remember { mutableStateOf("") }
+    var resultado by remember { mutableStateOf("") }
     Column(modifier = Modifier.fillMaxWidth(),
         verticalArrangement = Arrangement.Center,
         horizontalAlignment = Alignment.CenterHorizontally
         ) {
         Row() {
             OutlinedTextField(
-                value = "",
-                onValueChange = {  },
+                value = texto,
+                onValueChange = { texto = it },
                 label = { Text("Nombre") },
                 modifier = Modifier
                     .fillMaxWidth(0.8f), // 80% del ancho de la pantalla
@@ -81,6 +91,38 @@ fun Practica() {
                 Text("Enviar")
             }
         }
+        Row(Modifier.padding(16.dp)){
+            OutlinedTextField(
+               value = valora,
+                label = {Text("Primer Valor")},
+                onValueChange = {valora = it}
+               )
 
+
+        }
+        Row (Modifier.padding(16.dp)){
+            OutlinedTextField(
+                value = valorb,
+                label = {Text("Segundo valor")},
+                onValueChange = {valorb = it}
+            )
+        }
+        Row(Modifier.align(Alignment.CenterHorizontally)) {
+            OutlinedButton(onClick = {/*TODO*/
+            val a = valora.toInt()
+            val b = valorb.toInt()
+            val c = a + b
+            resultado = c.toString()
+            }) {
+                Text(text = "Enviar")
+            }
+        }
+        Row(Modifier.padding(16.dp)){
+            OutlinedTextField(
+                value = resultado,
+                label = {Text("Resultado")},
+                onValueChange = {resultado = it}
+            )
+        }
     }
 }

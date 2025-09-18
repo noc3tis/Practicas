@@ -6,6 +6,8 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import org.mozilla.javascript.Context
 import org.mozilla.javascript.Scriptable
+import kotlin.text.endsWith
+import kotlin.text.replace
 
 public class Calculos : ViewModel(){
 
@@ -30,15 +32,15 @@ public class Calculos : ViewModel(){
             }
 
             if (boton=="="){
-                try {
-                    resultado.value = calculos(ecuacion.value.toString())
-                }catch (_ : Exception){}
+                ecuacion.value = resultado.value
+                return
 
             }
 
-
             ecuacion.value = it+boton
-
+            try {
+                resultado.value = calculos(ecuacion.value.toString())
+            }catch (_ : Exception){}
 
         }
     }

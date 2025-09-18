@@ -24,6 +24,7 @@ import androidx.compose.material3.TextField
 import androidx.compose.material3.contentColorFor
 import androidx.compose.material3.rememberTopAppBarState
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.MutableState
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
@@ -60,7 +61,7 @@ class MainActivity : ComponentActivity() {
 @Preview(showBackground = true)
 @Composable
 fun Practica() {
-    var texto = ""
+    var texto = remember { mutableStateOf("") }
     val context = LocalContext.current
     var valora by remember { mutableStateOf("") }
     var valorb by remember { mutableStateOf("") }
@@ -68,35 +69,28 @@ fun Practica() {
     Column(modifier = Modifier.fillMaxWidth(),
         verticalArrangement = Arrangement.Center,
         horizontalAlignment = Alignment.CenterHorizontally
-        ) {
+    ) {
         Row() {
             OutlinedTextField(
-                value = texto,
-                onValueChange = { texto = it },
+                value = texto.value,
+                onValueChange = { texto.value = it },
                 label = { Text("Nombre") },
                 modifier = Modifier
-                    .fillMaxWidth(0.8f), // 80% del ancho de la pantalla
-                textStyle = androidx.compose.ui.text.TextStyle(
-                    fontSize = 20.sp,
-                    fontWeight = FontWeight.Bold,
-                    textAlign = TextAlign.Center
-                )
+                    .fillMaxWidth(0.8f)
             )
 
         }
         Row() {
-            Button(onClick = {/*TODO*/
-                Toast.makeText(context, texto, Toast.LENGTH_LONG).show()}, elevation = ButtonDefaults.buttonElevation(defaultElevation = 20.dp, pressedElevation = 15.dp, disabledElevation = 0.dp), border = BorderStroke(3.dp, Color.Black)
-            ) {
+            Button(onClick = {/*TODO*/}) {
                 Text("Enviar")
             }
         }
         Row(Modifier.padding(16.dp)){
             OutlinedTextField(
-               value = valora,
+                value = valora,
                 label = {Text("Primer Valor")},
                 onValueChange = {valora = it}
-               )
+            )
 
 
         }
@@ -109,10 +103,10 @@ fun Practica() {
         }
         Row(Modifier.align(Alignment.CenterHorizontally)) {
             OutlinedButton(onClick = {/*TODO*/
-            val a = valora.toInt()
-            val b = valorb.toInt()
-            val c = a + b
-            resultado = c.toString()
+                val a = valora.toInt()
+                val b = valorb.toInt()
+                val c = a + b
+                resultado = c.toString()
             }) {
                 Text(text = "Enviar")
             }

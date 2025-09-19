@@ -7,6 +7,7 @@ import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
 import androidx.compose.foundation.BorderStroke
+import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
@@ -54,94 +55,27 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
-import com.example.practicas.ui.theme.Calculos
+import androidx.lifecycle.viewmodel.compose.viewModel
+import com.example.practicas.ui.theme.MediumGray
+
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        val calculatorViewModel = ViewModelProvider(this)[Calculos::class.java]
         enableEdgeToEdge()
         setContent {
             PracticasTheme {
-                Scaffold( modifier = Modifier.fillMaxSize())  { innerPadding ->
-                    Calculadora(modifier = Modifier.padding(innerPadding), calculatorViewModel)
-                }
+                val viewModel = viewModel<CViewModel>()
+                val estado = viewModel.estado
+                val buttonSpacing = 8.dp
+                Calculadora(estado = estado, onAction = viewModel::onAction,
+                    buttonSpacing = buttonSpacing,
+                    modifier = Modifier.fillMaxSize().background(MediumGray).padding(16.dp))
+
             }
         }
 
 
-    }
-
-    val Botones = listOf(
-        "C", "(", ")", "÷",
-        "7", "8", "9", "*",
-        "4", "5", "6", "+",
-        "1", "2", "3", "-",
-        "AC", "0", ".", "=",
-    )
-
-    @Composable
-    fun Calculadora(modifier: Modifier = Modifier, viewModel: Calculos){
-
-        val ecuacion = viewModel.ListaEcuacion.observeAsState();
-        val resultado = viewModel.ListaResultado.observeAsState();
-
-        Column (
-            modifier = modifier.fillMaxSize(),
-            horizontalAlignment = Alignment.End
-        ){
-            Text(text = ecuacion.value?:"",
-                style = TextStyle(
-                    fontSize = 20.sp,
-                    textAlign = TextAlign.End
-                ))
-
-            Spacer(modifier = Modifier.height(150.dp))
-
-            Text(text = resultado.value?:"",
-                style = TextStyle(
-                    fontSize = 60.sp,
-                    textAlign = TextAlign.End
-                ))
-
-            Spacer(modifier = Modifier.height(10.dp))
-
-            LazyVerticalGrid(
-                columns = GridCells.Fixed(4),
-            ) {
-                items(Botones) {
-                    BotonesCalculadora(boton = it, onClick = {
-                        viewModel.onButtonClick(it)
-                    })
-                }
-            }
-        }
-    }
-
-    @Composable
-    fun BotonesCalculadora(boton: String, onClick : ()-> Unit){
-        Row (modifier = Modifier.padding(10.dp)) {
-            FloatingActionButton(onClick = onClick,
-                modifier = Modifier.size(80.dp),
-                shape = CircleShape,
-                containerColor = Color.Black
-            ) {
-                Text(text = boton,
-                    color = getColor(boton),
-                    fontSize = 20.sp,
-                    fontWeight = FontWeight.Bold)
-            }
-        }
-    }
-
-    fun getColor(boton:String) : Color{
-        if (boton == "C" || boton == "AC")
-            return Color(0xFFFF0000)
-        if (boton == "(" || boton == ")" || boton == "=")
-            return Color(0xFFCCA600)
-        if (boton == "÷" || boton == "*" || boton == "+" ||boton == "-")
-            return Color(0xFF00A0CC)
-        return Color(0xFFFAFAFA)
     }
 
 

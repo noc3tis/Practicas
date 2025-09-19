@@ -57,5 +57,7 @@ dependencies {
     debugImplementation(libs.androidx.ui.tooling)
     debugImplementation(libs.androidx.ui.test.manifest)
     implementation("androidx.compose.runtime:runtime-livedata:1.9.1")
-    implementation("com.faendir.rhino:rhino-android:1.6.0")
+    implementation ("androidx.lifecycle:lifecycle-viewmodel-compose:2.8.6")
+
+
 }

@@ -88,7 +88,7 @@ fun DivitionsContentView(navController: NavController){
             Text("AFC Sur",  color = Color.White)
         }
         Spacer(modifier = Modifier.height(50.dp))
-        OutlinedButton(onClick = {/*TODO*/}, colors = ButtonDefaults.buttonColors(containerColor = Color.Red), shape = RoundedCornerShape(10.dp)) {
+        OutlinedButton(onClick = {navController.navigate("AFCEa")}, colors = ButtonDefaults.buttonColors(containerColor = Color.Red), shape = RoundedCornerShape(10.dp)) {
             Icon(
                 painter = painterResource(id = R.drawable.afc_east),
                 contentDescription = "Entrar",

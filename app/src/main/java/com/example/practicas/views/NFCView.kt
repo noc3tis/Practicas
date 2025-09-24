@@ -53,7 +53,7 @@ fun NFCContentView(navController: NavController){
         horizontalAlignment = Alignment.CenterHorizontally
     ){
         Spacer(modifier = Modifier.height(40.dp))
-        OutlinedButton(onClick = {/*TODO*/}, colors = ButtonDefaults.buttonColors(containerColor = Color.Blue), shape = RoundedCornerShape(10.dp)) {
+        OutlinedButton(onClick = {navController.navigate("NFCWe")}, colors = ButtonDefaults.buttonColors(containerColor = Color.Blue), shape = RoundedCornerShape(10.dp)) {
             Icon(
                 painter = painterResource(id = R.drawable.hu3coiuwmtzx1cadquwa),
                 contentDescription = "Entrar",
@@ -66,7 +66,7 @@ fun NFCContentView(navController: NavController){
 
         }
         Spacer(modifier = Modifier.height(50.dp))
-        OutlinedButton(onClick = {/*TODO*/}, colors = ButtonDefaults.buttonColors(containerColor = Color.Blue), shape = RoundedCornerShape(10.dp)) {
+        OutlinedButton(onClick = {navController.navigate("NFCNo")}, colors = ButtonDefaults.buttonColors(containerColor = Color.Blue), shape = RoundedCornerShape(10.dp)) {
             Icon(
                 painter = painterResource(id = R.drawable.north),
                 contentDescription = "Entrar",
@@ -77,7 +77,7 @@ fun NFCContentView(navController: NavController){
             Text("NFC Norte",  color = Color.White)
         }
         Spacer(modifier = Modifier.height(50.dp))
-        OutlinedButton(onClick = {/*TODO*/}, colors = ButtonDefaults.buttonColors(containerColor = Color.Blue), shape = RoundedCornerShape(10.dp)) {
+        OutlinedButton(onClick = {navController.navigate("NFCSo")}, colors = ButtonDefaults.buttonColors(containerColor = Color.Blue), shape = RoundedCornerShape(10.dp)) {
             Icon(
                 painter = painterResource(id = R.drawable.xhtxcyfk0hyuxtn0axjo),
                 contentDescription = "Entrar",
@@ -88,7 +88,7 @@ fun NFCContentView(navController: NavController){
             Text("NFC Sur",  color = Color.White)
         }
         Spacer(modifier = Modifier.height(50.dp))
-        OutlinedButton(onClick = {/*TODO*/}, colors = ButtonDefaults.buttonColors(containerColor = Color.Blue), shape = RoundedCornerShape(10.dp)) {
+        OutlinedButton(onClick = {navController.navigate("NFCEa")}, colors = ButtonDefaults.buttonColors(containerColor = Color.Blue), shape = RoundedCornerShape(10.dp)) {
             Icon(
                 painter = painterResource(id = R.drawable.limd0nqjfujwltsfvirq),
                 contentDescription = "Entrar",

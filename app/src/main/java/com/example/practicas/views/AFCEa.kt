@@ -54,7 +54,7 @@ fun AFCEaContentView(navController: NavController){
         horizontalAlignment = Alignment.CenterHorizontally
     ){
         Spacer(modifier = Modifier.height(40.dp))
-        OutlinedButton(onClick = {/*TODO*/}, colors = ButtonDefaults.buttonColors(containerColor = Color(0xFFFB4F14)), shape = RoundedCornerShape(10.dp), border = BorderStroke(3.dp, Color(0xFF002244))) {
+        OutlinedButton(onClick = {/*TODO*/}, colors = ButtonDefaults.buttonColors(containerColor = Color(0xFF008E97)), shape = RoundedCornerShape(10.dp), border = BorderStroke(3.dp, Color(0xFFFC4C02))) {
             Icon(
                 painter = painterResource(id = R.drawable.miami_dolphins_logo_1997_2012),
                 contentDescription = "Entrar",
@@ -67,7 +67,7 @@ fun AFCEaContentView(navController: NavController){
 
         }
         Spacer(modifier = Modifier.height(50.dp))
-        OutlinedButton(onClick = {/*TODO*/}, colors = ButtonDefaults.buttonColors(containerColor = Color(0xFF0080C6)), shape = RoundedCornerShape(10.dp), border = BorderStroke(3.dp, Color(0xFFFFC20E))) {
+        OutlinedButton(onClick = {/*TODO*/}, colors = ButtonDefaults.buttonColors(containerColor = Color(0xFF125740)), shape = RoundedCornerShape(10.dp), border = BorderStroke(3.dp, Color(0xFFFFFFFF))) {
             Icon(
                 painter = painterResource(id = R.drawable.new_york_jets_logo_2019),
                 contentDescription = "Entrar",
@@ -89,7 +89,7 @@ fun AFCEaContentView(navController: NavController){
             Text("Bills",  color = Color(0xFFF7EF8A))
         }
         Spacer(modifier = Modifier.height(50.dp))
-        OutlinedButton(onClick = {/*TODO*/}, colors = ButtonDefaults.buttonColors(containerColor = Color(0xFF000000)), shape = RoundedCornerShape(10.dp),  border = BorderStroke(3.dp, Color(0xFFFFFFFF))) {
+        OutlinedButton(onClick = {/*TODO*/}, colors = ButtonDefaults.buttonColors(containerColor = Color(0xFF00338D)), shape = RoundedCornerShape(10.dp),  border = BorderStroke(3.dp, Color(0xFFC60C30))) {
             Icon(
                 painter = painterResource(id = R.drawable.new_england_patriots_logo_svg),
                 contentDescription = "Entrar",

@@ -31,73 +31,73 @@ import com.example.practicas.components.TitleBar
 @OptIn(ExperimentalMaterial3Api::class)
 @SuppressLint("UnusedMaterial3ScaffoldPaddingParameter")
 @Composable
-fun AFCWeView(navController: NavController){
+fun NFCWeView(navController: NavController){
     Scaffold(
         topBar = {
             CenterAlignedTopAppBar(
                 title = { TitleBar("Equipos")},
                 colors = TopAppBarDefaults.centerAlignedTopAppBarColors(
-                    containerColor = Color.Red
+                    containerColor = Color.Blue
                 )
             )
         }
     ) {
-        AFCWeContentView(navController)
+        NFCWeContentView(navController)
     }
 }
 
 @Composable
-fun AFCWeContentView(navController: NavController){
+fun NFCWeContentView(navController: NavController){
     Column(
         modifier = Modifier.fillMaxSize(),
         verticalArrangement = Arrangement.Center,
         horizontalAlignment = Alignment.CenterHorizontally
     ){
         Spacer(modifier = Modifier.height(40.dp))
-        OutlinedButton(onClick = {/*TODO*/}, colors = ButtonDefaults.buttonColors(containerColor = Color(0xFFFB4F14)), shape = RoundedCornerShape(10.dp), border = BorderStroke(3.dp, Color(0xFF002244))) {
+        OutlinedButton(onClick = {/*TODO*/}, colors = ButtonDefaults.buttonColors(containerColor = Color(0xFF002244)), shape = RoundedCornerShape(10.dp), border = BorderStroke(3.dp, Color(0xFF69BE28))) {
             Icon(
-                painter = painterResource(id = R.drawable.denver_broncos_logo_transparent),
+                painter = painterResource(id = R.drawable.seattle_seahawks_logo_transparent),
                 contentDescription = "Entrar",
                 tint = Color.Unspecified,
                 modifier = Modifier.size(100.dp).padding(0.dp, 0.dp, 15.dp, 0.dp)
 
             )
 
-            Text("Broncos", color = Color.White)
+            Text("Seahawks", color = Color.White)
 
         }
         Spacer(modifier = Modifier.height(50.dp))
-        OutlinedButton(onClick = {/*TODO*/}, colors = ButtonDefaults.buttonColors(containerColor = Color(0xFF0080C6)), shape = RoundedCornerShape(10.dp), border = BorderStroke(3.dp, Color(0xFFFFC20E))) {
+        OutlinedButton(onClick = {/*TODO*/}, colors = ButtonDefaults.buttonColors(containerColor = Color(0xFFAA0000)), shape = RoundedCornerShape(10.dp), border = BorderStroke(3.dp, Color(0xFFB3995D))) {
             Icon(
-                painter = painterResource(id = R.drawable.los_angeles_chargers_logo_svg),
+                painter = painterResource(id = R.drawable.san_francisco_49ers_logo_png_seeklogo_241798),
                 contentDescription = "Entrar",
                 tint = Color.Unspecified,
                 modifier = Modifier.size(100.dp).padding(0.dp, 0.dp, 15.dp, 0.dp)
             )
 
-            Text("Chargers",  color = Color.White)
+            Text("49ers",  color = Color.White)
         }
         Spacer(modifier = Modifier.height(50.dp))
-        OutlinedButton(onClick = {/*TODO*/}, colors = ButtonDefaults.buttonColors(containerColor = Color(0xFFE31837)), shape = RoundedCornerShape(10.dp), border = BorderStroke(3.dp, Color(0xFFFFFFFF))) {
+        OutlinedButton(onClick = {/*TODO*/}, colors = ButtonDefaults.buttonColors(containerColor = Color(0xFF003594)), shape = RoundedCornerShape(10.dp), border = BorderStroke(3.dp, Color(0xFFffa300))) {
             Icon(
-                painter = painterResource(id = R.drawable.kansas_city_chiefs_logo_transparent),
+                painter = painterResource(id = R.drawable.new_los_angeles_rams_logo_png_seeklogo_386951),
                 contentDescription = "Entrar",
                 tint = Color.Unspecified,
                 modifier = Modifier.size(100.dp).padding(0.dp, 0.dp, 15.dp, 0.dp)
             )
 
-            Text("Chiefs",  color = Color(0xFFF7EF8A))
+            Text("Rams",  color = Color(0xFFF7EF8A))
         }
         Spacer(modifier = Modifier.height(50.dp))
-        OutlinedButton(onClick = {/*TODO*/}, colors = ButtonDefaults.buttonColors(containerColor = Color(0xFF000000)), shape = RoundedCornerShape(10.dp),  border = BorderStroke(3.dp, Color(0xFFFFFFFF))) {
+        OutlinedButton(onClick = {/*TODO*/}, colors = ButtonDefaults.buttonColors(containerColor = Color(0xFF97233F)), shape = RoundedCornerShape(10.dp),  border = BorderStroke(3.dp, Color(0xFF000000))) {
             Icon(
-                painter = painterResource(id = R.drawable._699530395_8_01),
+                painter = painterResource(id = R.drawable.arizona_cardinals_logo_transparent),
                 contentDescription = "Entrar",
                 tint = Color.Unspecified,
                 modifier = Modifier.size(100.dp).padding(0.dp, 0.dp, 15.dp, 0.dp)
             )
 
-            Text("Raiders",  color = Color.White)
+            Text("Cardinals",  color = Color.White)
         }
     }
 }

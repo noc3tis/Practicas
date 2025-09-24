@@ -15,6 +15,7 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
+import androidx.compose.foundation.lazy.grid.LazyVerticalGrid
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.CenterAlignedTopAppBar
@@ -44,7 +45,7 @@ import com.example.practicas.components.TitleBar
 fun LionsView(navController: NavController){
     Surface(
         modifier = Modifier.fillMaxSize(),
-        color = Color.White
+        color = Color.Black
     ) { }
         LionsContentView(navController)
 }
@@ -53,30 +54,55 @@ fun LionsView(navController: NavController){
 fun LionsContentView(navController: NavController) {
     Column(modifier = Modifier.fillMaxSize().padding(top = 35.dp),
         horizontalAlignment = Alignment.CenterHorizontally) {
-        Box(modifier = Modifier.padding(1.dp).border(2.dp, Color.Black, RoundedCornerShape(12.dp)).padding(horizontal = 24.dp, vertical = 12.dp)){
-            Text(text = "Detroit Lions", fontSize = 35.sp, color = Color.Black, fontFamily = FontFamily.Serif)
+        Box(modifier = Modifier.padding(1.dp).border(2.dp, Color(0xFF0076b6), RoundedCornerShape(12.dp)).padding(horizontal = 24.dp, vertical = 12.dp)){
+            Text(text = "Detroit Lions", fontSize = 35.sp, color = Color(0xFF0076b6), fontFamily = FontFamily.Serif)
 
         }
     }
     Row (modifier = Modifier.fillMaxSize().padding(top = 50.dp),
-        horizontalArrangement = Arrangement.Center) {
+        horizontalArrangement = Arrangement.Center,
+        ) {
         Image(painter = painterResource(id = R.drawable._920x0), contentDescription = "Lions", modifier = Modifier.size(400.dp))
     }
     Row(modifier = Modifier.fillMaxSize().padding(top = 445.dp),
         horizontalArrangement = Arrangement.Center) {
-        Box(modifier = Modifier.padding(1.dp).border(2.dp, Color.Black, RoundedCornerShape(12.dp)).padding(horizontal = 24.dp, vertical = 12.dp)){
-            Text(text = "Detroit ya no es sorpresa, es candidato. Goff, Amon-Ra y un juego terrestre poderoso hacen de los Lions un equipo sólido. La expectativa es clara: pelear por la NFC y demostrar que no son “one hit wonder”.", fontSize = 15.sp, color = Color.Black, fontFamily = FontFamily.Serif)
+        Box(modifier = Modifier.padding(1.dp).border(2.dp, Color(0xFF0076b6), RoundedCornerShape(12.dp)).padding(horizontal = 24.dp, vertical = 12.dp)){
+            Text(text = "Detroit ya no es sorpresa, es candidato. Goff, Amon-Ra y un juego terrestre poderoso hacen de los Lions un equipo sólido. La expectativa es clara: pelear por la NFC y demostrar que no son “one hit wonder”.", fontSize = 15.sp, color = Color(0xFF0076b6), fontFamily = FontFamily.Serif)
 
         }
     }
 
     Row(modifier = Modifier.fillMaxSize().padding(top = 385.dp),
-        horizontalArrangement = Arrangement.Center) {
-        Box(modifier = Modifier.padding(1.dp).border(2.dp, Color.Black, RoundedCornerShape(12.dp)).padding(horizontal = 24.dp, vertical = 12.dp)){
-            Text(text = "Record: 2-1", fontSize = 15.sp, color = Color.Black, fontFamily = FontFamily.Serif)
+        horizontalArrangement = Arrangement.Start) {
+        Box(modifier = Modifier.padding(1.dp).border(2.dp, Color(0xFF0076b6), RoundedCornerShape(12.dp)).padding(horizontal = 24.dp, vertical = 12.dp)){
+            Text(text = "Record: 2-1", fontSize = 15.sp, color = Color(0xFF0076b6), fontFamily = FontFamily.Serif)
 
         }
     }
+    Row(modifier = Modifier.fillMaxSize().padding(top = 385.dp),
+        horizontalArrangement = Arrangement.End) {
+        Box(modifier = Modifier.padding(1.dp).border(2.dp, Color(0xFF0076b6), RoundedCornerShape(12.dp)).padding(horizontal = 24.dp, vertical = 12.dp)){
+            Text(text = "Campeones de la NFC North", fontSize = 13.sp, color = Color(0xFF0076b6), fontFamily = FontFamily.Serif)
+
+        }
+    }
+
+    Row(modifier = Modifier.fillMaxSize().padding(top = 625.dp),
+        horizontalArrangement = Arrangement.Center) {
+        Box(modifier = Modifier.padding(1.dp).border(2.dp, Color(0xFF0076b6), RoundedCornerShape(12.dp)).padding(horizontal = 24.dp, vertical = 12.dp)){
+            Text(text = "Proximos partidos: Browns, Buccaneers, Eagles, Vikings...", fontSize = 15.sp, color = Color(0xFF0076b6), fontFamily = FontFamily.Serif)
+
+        }
+    }
+
+    Row(modifier = Modifier.fillMaxSize().padding(top = 710.dp),
+        horizontalArrangement = Arrangement.Center) {
+        Box(modifier = Modifier.padding(1.dp).border(2.dp, Color(0xFF0076b6), RoundedCornerShape(12.dp)).padding(horizontal = 24.dp, vertical = 12.dp)){
+            Text(text = "Jugador mas valioso: Jared Goff", fontSize = 15.sp, color = Color(0xFF0076b6), fontFamily = FontFamily.Serif)
+
+        }
+    }
+
 
 
 }

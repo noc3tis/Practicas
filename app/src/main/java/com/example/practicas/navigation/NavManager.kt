@@ -18,6 +18,7 @@ import com.example.practicas.views.NFCSoView
 import com.example.practicas.views.NFCView
 import com.example.practicas.views.NFCWeView
 import com.example.practicas.views.SplashScreen
+import com.example.practicas.views.TBView
 
 @Composable
 fun NavManager(){
@@ -72,6 +73,10 @@ fun NavManager(){
         }
         composable (route = "Lions"){
             LionsView(navController)
+        }
+
+        composable (route = "TB"){
+            TBView(navController)
         }
     }
 }

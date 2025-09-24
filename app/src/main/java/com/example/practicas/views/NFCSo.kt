@@ -78,7 +78,7 @@ fun NFCSoContentView(navController: NavController){
             Text("Saints",  color = Color.White)
         }
         Spacer(modifier = Modifier.height(50.dp))
-        OutlinedButton(onClick = {/*TODO*/}, colors = ButtonDefaults.buttonColors(containerColor = Color(0xFFD50A0A)), shape = RoundedCornerShape(10.dp), border = BorderStroke(3.dp, Color(0xFF0A0A08))) {
+        OutlinedButton(onClick = {navController.navigate("TB")}, colors = ButtonDefaults.buttonColors(containerColor = Color(0xFFD50A0A)), shape = RoundedCornerShape(10.dp), border = BorderStroke(3.dp, Color(0xFF0A0A08))) {
             Icon(
                 painter = painterResource(id = R.drawable.tampa_bay_buccaneers_logo_transparent),
                 contentDescription = "Entrar",

@@ -45,21 +45,21 @@ import com.example.practicas.components.TitleBar
 @OptIn(ExperimentalMaterial3Api::class)
 @SuppressLint("UnusedMaterial3ScaffoldPaddingParameter")
 @Composable
-fun LionsView(navController: NavController){
+fun TBView(navController: NavController){
     Surface(
         modifier = Modifier.fillMaxSize(),
-        color = Color.Black
+        color = Color(0xFFD50A0A)
     ) { }
-        LionsContentView(navController)
+    TBContentView(navController)
 }
 
 @Composable
-fun LionsContentView(navController: NavController) {
+fun TBContentView(navController: NavController) {
     Box(modifier = Modifier.verticalScroll(rememberScrollState())) {
         Column(modifier = Modifier.fillMaxSize().padding(top = 35.dp),
             horizontalAlignment = Alignment.CenterHorizontally) {
-            Box(modifier = Modifier.padding(1.dp).border(2.dp, Color(0xFF0076b6), RoundedCornerShape(12.dp)).padding(horizontal = 24.dp, vertical = 12.dp)){
-                Text(text = "Detroit Lions", fontSize = 35.sp, color = Color(0xFF0076b6), fontFamily = FontFamily.Serif)
+            Box(modifier = Modifier.padding(1.dp).border(2.dp, Color(0xFF0A0A08), RoundedCornerShape(12.dp)).padding(horizontal = 24.dp, vertical = 12.dp)){
+                Text(text = "Tampa Bay Buccaneers", fontSize = 35.sp, color = Color(0xFF0A0A08), fontFamily = FontFamily.Serif)
 
             }
         }
@@ -71,8 +71,8 @@ fun LionsContentView(navController: NavController) {
         }
         Row(modifier = Modifier.fillMaxSize().padding(top = 445.dp),
             horizontalArrangement = Arrangement.Center) {
-            Box(modifier = Modifier.padding(1.dp).border(2.dp, Color(0xFF0076b6), RoundedCornerShape(12.dp)).padding(horizontal = 24.dp, vertical = 12.dp)){
-                Text(text = "Detroit ya no es sorpresa, es candidato. Goff, Amon-Ra y un juego terrestre poderoso hacen de los Lions un equipo sólido. La expectativa es clara: pelear por la NFC y demostrar que no son “one hit wonder”.", fontSize = 15.sp, color = Color(0xFF0076b6), fontFamily = FontFamily.Serif)
+            Box(modifier = Modifier.padding(1.dp).border(2.dp, Color(0xFF0A0A08), RoundedCornerShape(12.dp)).padding(horizontal = 24.dp, vertical = 12.dp)){
+                Text(text = "Detroit ya no es sorpresa, es candidato. Goff, Amon-Ra y un juego terrestre poderoso hacen de los Lions un equipo sólido. La expectativa es clara: pelear por la NFC y demostrar que no son “one hit wonder”.", fontSize = 15.sp, color = Color(0xFF0A0A08), fontFamily = FontFamily.Serif)
 
             }
         }

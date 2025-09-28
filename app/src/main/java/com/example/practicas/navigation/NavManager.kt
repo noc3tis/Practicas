@@ -10,6 +10,7 @@ import com.example.practicas.views.AFCNoView
 import com.example.practicas.views.AFCSoView
 import com.example.practicas.views.AFCWeView
 import com.example.practicas.views.DivitionsView
+import com.example.practicas.views.EagleView
 import com.example.practicas.views.HomeView
 import com.example.practicas.views.LionsView
 import com.example.practicas.views.NFCEaView
@@ -17,6 +18,7 @@ import com.example.practicas.views.NFCNoView
 import com.example.practicas.views.NFCSoView
 import com.example.practicas.views.NFCView
 import com.example.practicas.views.NFCWeView
+import com.example.practicas.views.RamView
 import com.example.practicas.views.SplashScreen
 import com.example.practicas.views.TBView
 
@@ -77,6 +79,12 @@ fun NavManager(){
 
         composable (route = "TB"){
             TBView(navController)
+        }
+        composable (route = "Rams"){
+            RamView(navController)
+        }
+        composable (route = "Ea"){
+            EagleView(navController)
         }
     }
 }

@@ -50,28 +50,25 @@ import com.example.practicas.R
 import com.example.practicas.components.TitleBar
 import kotlinx.coroutines.internal.OpDescriptor
 
-data class Juego(
-    val imageRes: Int,
-    val title: String
-)
+
 
 @OptIn(ExperimentalMaterial3Api::class)
 @SuppressLint("UnusedMaterial3ScaffoldPaddingParameter")
 @Composable
-fun LionsView(navController: NavController){
+fun EagleView(navController: NavController){
     Surface(
         modifier = Modifier.fillMaxSize(),
         color = Color.White
     ) { }
-        LionsContentView(navController)
+    EagleContentView(navController)
 }
 
 @Composable
-fun CarruselIamgenes() {
+fun CarruselIamgenesEa() {
     val imagenes = listOf(
-        R.drawable._920x0,
-        R.drawable.b4ff2cd9_882f_455e_adb0_44269488ec6c_1024x683,
-        R.drawable.c2c519b6c0feeb6f2cff840ab364bd45
+        R.drawable.ram1,
+        R.drawable.ram2,
+        R.drawable.ram3
     )
 
     LazyRow (horizontalArrangement = Arrangement.spacedBy(16.dp),
@@ -85,21 +82,21 @@ fun CarruselIamgenes() {
 
 
 @Composable
-fun CarruselCartas() {
+fun CarruselCartasEa() {
     val cartas = listOf(
-        Juego(R.drawable.cleveland_browns_logo_transparent, "Cleveland Browns"),
-        Juego(R.drawable.cincinnati_bengals_logo_svg, "Cincinat Bengals"),
-        Juego(R.drawable.kansas_city_chiefs_logo_transparent, "Kansas City Chiefs"),
+        Juego(R.drawable.indianapolis_colts_logo_svg, "Indianapolis Colts"),
+        Juego(R.drawable.san_francisco_49ers_logo_png_seeklogo_241798, "San Francisco 49ers"),
+        Juego(R.drawable.baltimore_ravens_logo_transparent, "Baltimore Ravens"),
+        Juego(R.drawable.jacksonville_jaguars_logo_transparent, "Jacksonville Jaguars"),
+        Juego(R.drawable.new_orleans_saints_logo_svg, "New Orleans Saints"),
+        Juego(R.drawable.san_francisco_49ers_logo_png_seeklogo_241798, "San Francisco 49ers"),
+        Juego(R.drawable.seattle_seahawks_logo_transparent, "Seeattle Seahawks"),
         Juego(R.drawable.tampa_bay_buccaneers_logo_transparent, "Tampa Bay Buccaneers"),
-        Juego(R.drawable.minnesota_vikings_logo_transparent, "Minnesota Vikings"),
-        Juego(R.drawable.washington_commanders_logo_svg, "Washington Commanders"),
-        Juego(R.drawable.new_york_giants_logo_svg, "New York Giants"),
-        Juego(R.drawable.green_bay_packers_logo_svg, "Green Bay Packers"),
-        Juego(R.drawable.dallas_cowboys_svg, "Dallas Cowboys"),
-        Juego(R.drawable.new_los_angeles_rams_logo_png_seeklogo_386951, "Los Angeles Rams"),
-        Juego(R.drawable.pittsburgh_steelers_logo_svg, "Pittsburgh Steelers"),
-        Juego(R.drawable.minnesota_vikings_logo_transparent, "Minnesota Vikings"),
-        Juego(R.drawable.chicago_bears_logo, "Chicago Bears"),
+        Juego(R.drawable.arizona_cardinals_logo_transparent, "Arizona Cardinals"),
+        Juego(R.drawable.detroit_lions_logo_transparent, "Detroit Lions"),
+        Juego(R.drawable.atlanta_falcons_logo_transparent, "Atlanta Falcons"),
+        Juego(R.drawable.seattle_seahawks_logo_transparent, "Seeattle Seahawks"),
+        Juego(R.drawable.carolina_panthers_logo_transparent, "Carolina Panthers")
     )
 
     LazyRow (horizontalArrangement = Arrangement.spacedBy(16.dp),
@@ -119,11 +116,11 @@ fun CarruselCartas() {
 }
 
 @Composable
-fun CarruselCartas2() {
+fun CarruselCartas2Ea() {
     val cartas = listOf(
-        Juego(R.drawable.green_bay_packers_logo_svg, "L 13-27 Packers"),
-        Juego(R.drawable.chicago_bears_logo, "W 52-21 Bears"),
-        Juego(R.drawable.baltimore_ravens_logo_transparent, "W 38-30 Ravens")
+        Juego(R.drawable.houston_texans_logo_transparent, "W 14-9 Houston Texans"),
+        Juego(R.drawable.tennessee_titans_logo_transparent, "W 33-19 Titans"),
+        Juego(R.drawable.philadelphia_eagles_logo, "L 33-26 Philadelphia Eagles")
     )
 
     LazyRow (horizontalArrangement = Arrangement.spacedBy(16.dp),
@@ -143,11 +140,11 @@ fun CarruselCartas2() {
 }
 
 @Composable
-fun Jugadores() {
+fun JugadoresEa() {
     val cartas = listOf(
-        Juego(R.drawable.i, "Jared Goff"),
-        Juego(R.drawable.i__2_, "Aidan Hutchinson"),
-        Juego(R.drawable.i__1_, "Jahmyr Gibbs")
+        Juego(R.drawable.i__5_, "Matthew Stafford"),
+        Juego(R.drawable._426515, "Puka Nacua"),
+        Juego(R.drawable.i__6_, "Davante Adams")
     )
 
     LazyRow (horizontalArrangement = Arrangement.spacedBy(16.dp),
@@ -170,26 +167,26 @@ fun Jugadores() {
 
 
 @Composable
-fun LionsContentView(navController: NavController) {
+fun EagleContentView(navController: NavController) {
     Box(modifier = Modifier.verticalScroll(rememberScrollState())) {
         Column(modifier = Modifier.fillMaxSize().padding(top = 40.dp),
             horizontalAlignment = Alignment.CenterHorizontally) {
-            ElevatedCard(modifier = Modifier.width(250.dp), colors = CardDefaults.cardColors(containerColor = Color.White), shape = RoundedCornerShape(16.dp), elevation = CardDefaults.cardElevation(defaultElevation = 8.dp)) {
-                Text(text = "Detroit Lions", fontSize = 35.sp, color = Color(0xFF000000), fontFamily = FontFamily.Serif, modifier = Modifier.align(
+            ElevatedCard(modifier = Modifier.width(350.dp), colors = CardDefaults.cardColors(containerColor = Color.White), shape = RoundedCornerShape(16.dp), elevation = CardDefaults.cardElevation(defaultElevation = 8.dp)) {
+                Text(text = "Los Angeles Rams", fontSize = 35.sp, color = Color(0xFF000000), fontFamily = FontFamily.Serif, modifier = Modifier.align(
                     Alignment.CenterHorizontally))
 
             }
         }
 
         Box(modifier = Modifier.fillMaxSize().padding(top = 45.dp)){
-            CarruselIamgenes()
+            CarruselIamgenesEa()
         }
 
 
         Row(modifier = Modifier.fillMaxSize().padding(top = 445.dp),
             horizontalArrangement = Arrangement.Center) {
             ElevatedCard(modifier = Modifier.width(375.dp), colors = CardDefaults.cardColors(containerColor = Color.White), shape = RoundedCornerShape(16.dp), elevation = CardDefaults.cardElevation(defaultElevation = 8.dp)){
-                Text(text = "Detroit ya no es sorpresa, es candidato. Goff, Amon-Ra y un juego terrestre poderoso hacen de los Lions un equipo sólido. La expectativa es clara: pelear por la NFC y demostrar que no son “one hit wonder”.", fontSize = 15.sp, color = Color(0xFF000000), fontFamily = FontFamily.Serif)
+                Text(text = "Sin Cooper Kupp, la ofensiva se reconfigura alrededor de Stafford y Nacua. 2025 será el año de transición hacia un nuevo núcleo ofensivo, más joven, con menos margen de error.", fontSize = 15.sp, color = Color(0xFF000000), fontFamily = FontFamily.Serif)
 
             }
         }
@@ -198,7 +195,7 @@ fun LionsContentView(navController: NavController) {
             horizontalArrangement = Arrangement.Start) {
             ElevatedCard(modifier = Modifier.width(130.dp).height(50.dp),  colors = CardDefaults.cardColors(containerColor = Color.White), shape = RoundedCornerShape(16.dp), elevation = CardDefaults.cardElevation(defaultElevation = 8.dp)){
                 Box (modifier = Modifier.fillMaxSize(), contentAlignment = Alignment.Center){
-                Text(text = "Record: 2-1", fontSize = 16.sp, color = Color(0xFF000000), fontFamily = FontFamily.Serif)
+                    Text(text = "Record: 2-1", fontSize = 16.sp, color = Color(0xFF000000), fontFamily = FontFamily.Serif)
                 }
             }
         }
@@ -206,7 +203,7 @@ fun LionsContentView(navController: NavController) {
             horizontalArrangement = Arrangement.End) {
             ElevatedCard(modifier = Modifier.width(245.dp).height(50.dp),  colors = CardDefaults.cardColors(containerColor = Color.White), shape = RoundedCornerShape(16.dp), elevation = CardDefaults.cardElevation(defaultElevation = 8.dp)){
                 Box (modifier = Modifier.fillMaxSize(), contentAlignment = Alignment.Center){
-                    Text(text = "Campeones de la NFC Norte", fontSize = 16.sp, color = Color(0xFF000000), fontFamily = FontFamily.Serif)
+                    Text(text = "Campeones de la NFC Oeste", fontSize = 16.sp, color = Color(0xFF000000), fontFamily = FontFamily.Serif)
                 }
             }
         }
@@ -215,21 +212,21 @@ fun LionsContentView(navController: NavController) {
 
         Row(modifier = Modifier.fillMaxSize().padding(top = 625.dp),
             horizontalArrangement = Arrangement.Center) {
-            CarruselCartas()
+            CarruselCartasEa()
         }
 
         Text(text = "Resultados:", modifier = Modifier.fillMaxSize().padding(top = 770.dp))
 
         Row(modifier = Modifier.fillMaxSize().padding(top = 810.dp),
             horizontalArrangement = Arrangement.Center) {
-            CarruselCartas2()
+            CarruselCartas2Ea()
         }
 
         Text(text = "Jugadores importantes:", modifier = Modifier.fillMaxSize().padding(top = 960.dp))
 
         Row(modifier = Modifier.fillMaxSize().padding(top = 1000.dp),
             horizontalArrangement = Arrangement.Center) {
-            Jugadores()
+            JugadoresEa()
         }
     }
 

@@ -78,7 +78,7 @@ fun NFCWeContentView(navController: NavController){
             Text("49ers",  color = Color.White)
         }
         Spacer(modifier = Modifier.height(50.dp))
-        OutlinedButton(onClick = {/*TODO*/}, colors = ButtonDefaults.buttonColors(containerColor = Color(0xFF003594)), shape = RoundedCornerShape(10.dp), border = BorderStroke(3.dp, Color(0xFFffa300))) {
+        OutlinedButton(onClick = {navController.navigate("Rams")}, colors = ButtonDefaults.buttonColors(containerColor = Color(0xFF003594)), shape = RoundedCornerShape(10.dp), border = BorderStroke(3.dp, Color(0xFFffa300))) {
             Icon(
                 painter = painterResource(id = R.drawable.new_los_angeles_rams_logo_png_seeklogo_386951),
                 contentDescription = "Entrar",

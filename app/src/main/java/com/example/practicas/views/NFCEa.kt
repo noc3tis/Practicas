@@ -78,7 +78,7 @@ fun NFCEaContentView(navController: NavController){
             Text("Commanders",  color = Color.White)
         }
         Spacer(modifier = Modifier.height(50.dp))
-        OutlinedButton(onClick = {/*TODO*/}, colors = ButtonDefaults.buttonColors(containerColor = Color(0xFF004C54)), shape = RoundedCornerShape(10.dp), border = BorderStroke(3.dp, Color(0xFFA5ACAF))) {
+        OutlinedButton(onClick = {navController.navigate("Ea")}, colors = ButtonDefaults.buttonColors(containerColor = Color(0xFF004C54)), shape = RoundedCornerShape(10.dp), border = BorderStroke(3.dp, Color(0xFFA5ACAF))) {
             Icon(
                 painter = painterResource(id = R.drawable.philadelphia_eagles_logo),
                 contentDescription = "Entrar",

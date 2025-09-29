@@ -10,6 +10,8 @@ import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.shape.RoundedCornerShape
+import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.automirrored.filled.ArrowBack
 import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.CenterAlignedTopAppBar
 import androidx.compose.material3.ExperimentalMaterial3Api
@@ -26,6 +28,7 @@ import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavController
 import com.example.practicas.R
+import com.example.practicas.components.MainIconButton
 import com.example.practicas.components.TitleBar
 
 @OptIn(ExperimentalMaterial3Api::class)
@@ -38,7 +41,11 @@ fun AFCSoView(navController: NavController){
                 title = { TitleBar("Equipos")},
                 colors = TopAppBarDefaults.centerAlignedTopAppBarColors(
                     containerColor = Color.Red
-                )
+                ), navigationIcon={
+                    MainIconButton(icon = Icons.AutoMirrored.Filled.ArrowBack){
+                        navController.popBackStack()
+                    }
+                }
             )
         }
     ) {
@@ -78,7 +85,7 @@ fun AFCSoContentView(navController: NavController){
             Text("Colts",  color = Color.White)
         }
         Spacer(modifier = Modifier.height(50.dp))
-        OutlinedButton(onClick = {/*TODO*/}, colors = ButtonDefaults.buttonColors(containerColor = Color(0xFFA71930)), shape = RoundedCornerShape(10.dp), border = BorderStroke(3.dp, Color(0xFF03202f))) {
+        OutlinedButton(onClick = {navController.navigate("Tex")}, colors = ButtonDefaults.buttonColors(containerColor = Color(0xFFA71930)), shape = RoundedCornerShape(10.dp), border = BorderStroke(3.dp, Color(0xFF03202f))) {
             Icon(
                 painter = painterResource(id = R.drawable.houston_texans_logo_transparent),
                 contentDescription = "Entrar",

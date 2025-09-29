@@ -55,20 +55,20 @@ import kotlinx.coroutines.internal.OpDescriptor
 @OptIn(ExperimentalMaterial3Api::class)
 @SuppressLint("UnusedMaterial3ScaffoldPaddingParameter")
 @Composable
-fun EagleView(navController: NavController){
+fun BillsView(navController: NavController){
     Surface(
         modifier = Modifier.fillMaxSize(),
-        color = Color.White
+        color = Color.White,
     ) { }
-    EagleContentView(navController)
+    BillsContentView(navController)
 }
 
 @Composable
-fun CarruselIamgenesEa() {
+fun CarruselIamgenesBills() {
     val imagenes = listOf(
-        R.drawable._1jhzavy5k312csgzf3j,
-        R.drawable.attachment_gettyimages_21960942761,
-        R.drawable.eagles_super_bowl_recap
+        R.drawable.bills1,
+        R.drawable.bills2,
+        R.drawable.bills6
     )
 
     LazyRow (horizontalArrangement = Arrangement.spacedBy(16.dp),
@@ -82,23 +82,23 @@ fun CarruselIamgenesEa() {
 
 
 @Composable
-fun CarruselCartasEa() {
+fun CarruselCartasBills() {
     val cartas = listOf(
+        Juego(R.drawable.new_orleans_saints_logo_svg, "New Orleans Saints"),
+        Juego(R.drawable.new_england_patriots_logo_svg, "New England Patriots"),
+        Juego(R.drawable.atlanta_falcons_logo_transparent, "Atlanta Falcons"),
+        Juego(R.drawable.carolina_panthers_logo_transparent, "Carolina Panthers"),
+        Juego(R.drawable.kansas_city_chiefs_logo_transparent, "Kansas City Chiefs"),
+        Juego(R.drawable.miami_dolphins_logo_1997_2012, "Miami Dolphins"),
         Juego(R.drawable.tampa_bay_buccaneers_logo_transparent, "Tampa Bay Buccaneers"),
-        Juego(R.drawable.denver_broncos_logo_transparent, "Denver Broncos"),
-        Juego(R.drawable.new_york_giants_logo_svg, "New York Giants"),
-        Juego(R.drawable.minnesota_vikings_logo_transparent, "Minnesota Vikings"),
-        Juego(R.drawable.green_bay_packers_logo_svg, "Green Bay Packers"),
-        Juego(R.drawable.detroit_lions_logo_transparent, "Detroit Lions"),
-        Juego(R.drawable.dallas_cowboys_svg, "Dallas Cowboys"),
-        Juego(R.drawable.chicago_bears_logo, "Chicago Bears"),
-        Juego(R.drawable.los_angeles_chargers_logo_svg, "Los Angeles Chargers"),
-        Juego(R.drawable.las_vegas_raiders_logo_1982, "Las Vegas Raiders"),
-        Juego(R.drawable.washington_commanders_logo_svg, "Washington Commanders"),
-        Juego(R.drawable.buffalo_bills_logo_transparent, "Buffalo Bills"),
-        Juego(R.drawable.washington_commanders_logo_svg, "Washington Commanders"),
+        Juego(R.drawable.houston_texans_logo_transparent, "Houston Texans"),
+        Juego(R.drawable.pittsburgh_steelers_logo_svg, "Pittsburgh Steelers"),
+        Juego(R.drawable.cincinnati_bengals_logo_svg, "Cincinnati Bengals"),
+        Juego(R.drawable.new_england_patriots_logo_svg, "New England Patriots"),
+        Juego(R.drawable.philadelphia_eagles_logo, "Philadelphia Eagles"),
+        Juego(R.drawable.new_york_jets_logo_2019, "New York Jets"),
 
-    )
+        )
 
     LazyRow (horizontalArrangement = Arrangement.spacedBy(16.dp),
         contentPadding = PaddingValues(horizontal = 16.dp)
@@ -117,11 +117,11 @@ fun CarruselCartasEa() {
 }
 
 @Composable
-fun CarruselCartas2Ea() {
+fun CarruselCartas2Bills() {
     val cartas = listOf(
-        Juego(R.drawable.dallas_cowboys_svg, "W 24-20 Dallas Cowboys"),
-        Juego(R.drawable.kansas_city_chiefs_logo_transparent, "W 20-17 Kansas City Chiefs"),
-        Juego(R.drawable.new_los_angeles_rams_logo_png_seeklogo_386951, "W 33-26 Los Angeles Rams")
+        Juego(R.drawable.baltimore_ravens_logo_transparent, "W 41-40 Baltimore Ravens"),
+        Juego(R.drawable.new_york_jets_logo_2019, "W 30-10 New York Jets"),
+        Juego(R.drawable.detroit_lions_logo_transparent, "W 31-21 Miami Dolphins")
     )
 
     LazyRow (horizontalArrangement = Arrangement.spacedBy(16.dp),
@@ -141,11 +141,11 @@ fun CarruselCartas2Ea() {
 }
 
 @Composable
-fun JugadoresEa() {
+fun JugadoresBills() {
     val cartas = listOf(
-        Juego(R.drawable.i__7_, "Jalen Hurts"),
-        Juego(R.drawable.i__8_, "Saquon Barkley"),
-        Juego(R.drawable.i__9_, "Jalen Carter")
+        Juego(R.drawable.bills4, "Josh Allen"),
+        Juego(R.drawable.bills5, "Matt Milano"),
+        Juego(R.drawable.bills7, "James Cook")
     )
 
     LazyRow (horizontalArrangement = Arrangement.spacedBy(16.dp),
@@ -168,26 +168,26 @@ fun JugadoresEa() {
 
 
 @Composable
-fun EagleContentView(navController: NavController) {
+fun BillsContentView(navController: NavController) {
     Box(modifier = Modifier.verticalScroll(rememberScrollState())) {
         Column(modifier = Modifier.fillMaxSize().padding(top = 40.dp),
             horizontalAlignment = Alignment.CenterHorizontally) {
             ElevatedCard(modifier = Modifier.width(350.dp), colors = CardDefaults.cardColors(containerColor = Color.White), shape = RoundedCornerShape(16.dp), elevation = CardDefaults.cardElevation(defaultElevation = 8.dp)) {
-                Text(text = "Philadelphia Eagles", fontSize = 35.sp, color = Color(0xFF000000), fontFamily = FontFamily.Serif, modifier = Modifier.align(
+                Text(text = "Buffalo Bills", fontSize = 35.sp, color = Color(0xFF000000), fontFamily = FontFamily.Serif, modifier = Modifier.align(
                     Alignment.CenterHorizontally))
 
             }
         }
 
         Box(modifier = Modifier.fillMaxSize().padding(top = 45.dp)){
-            CarruselIamgenesEa()
+            CarruselIamgenesBills()
         }
 
 
         Row(modifier = Modifier.fillMaxSize().padding(top = 445.dp),
             horizontalArrangement = Arrangement.Center) {
             ElevatedCard(modifier = Modifier.width(375.dp), colors = CardDefaults.cardColors(containerColor = Color.White), shape = RoundedCornerShape(16.dp), elevation = CardDefaults.cardElevation(defaultElevation = 8.dp)){
-                Text(text = "Con un roster cargado de talento en ambas líneas, los Eagles entran como candidatos fuertes. 2025 es la oportunidad de recuperar la cima tras un 2024 irregular. Su temporada será evaluada no por victorias, sino por su capacidad de llegar a febrero.", fontSize = 15.sp, color = Color(0xFF000000), fontFamily = FontFamily.Serif)
+                Text(text = "Josh Allen continúa como motor ofensivo, pero la narrativa de 2025 es clara: ¿podrán finalmente dar el paso al Super Bowl o volverán a quedarse cortos? Con una defensa renovada y más presión que nunca, Buffalo sabe que la paciencia de su afición se agota.", fontSize = 15.sp, color = Color(0xFF000000), fontFamily = FontFamily.Serif)
 
             }
         }
@@ -204,7 +204,7 @@ fun EagleContentView(navController: NavController) {
             horizontalArrangement = Arrangement.End) {
             ElevatedCard(modifier = Modifier.width(245.dp).height(50.dp),  colors = CardDefaults.cardColors(containerColor = Color.White), shape = RoundedCornerShape(16.dp), elevation = CardDefaults.cardElevation(defaultElevation = 8.dp)){
                 Box (modifier = Modifier.fillMaxSize(), contentAlignment = Alignment.Center){
-                    Text(text = "Campeones de la NFL", fontSize = 16.sp, color = Color(0xFF000000), fontFamily = FontFamily.Serif)
+                    Text(text = "Campeones de la AFC Este", fontSize = 16.sp, color = Color(0xFF000000), fontFamily = FontFamily.Serif)
                 }
             }
         }
@@ -213,21 +213,21 @@ fun EagleContentView(navController: NavController) {
 
         Row(modifier = Modifier.fillMaxSize().padding(top = 625.dp),
             horizontalArrangement = Arrangement.Center) {
-            CarruselCartasEa()
+            CarruselCartasBills()
         }
 
         Text(text = "Resultados:", modifier = Modifier.fillMaxSize().padding(top = 770.dp))
 
         Row(modifier = Modifier.fillMaxSize().padding(top = 810.dp),
             horizontalArrangement = Arrangement.Center) {
-            CarruselCartas2Ea()
+            CarruselCartas2Bills()
         }
 
         Text(text = "Jugadores importantes:", modifier = Modifier.fillMaxSize().padding(top = 960.dp))
 
         Row(modifier = Modifier.fillMaxSize().padding(top = 1000.dp),
             horizontalArrangement = Arrangement.Center) {
-            JugadoresEa()
+            JugadoresBills()
         }
     }
 

@@ -9,6 +9,8 @@ import com.example.practicas.views.AFCEaView
 import com.example.practicas.views.AFCNoView
 import com.example.practicas.views.AFCSoView
 import com.example.practicas.views.AFCWeView
+import com.example.practicas.views.BillsView
+import com.example.practicas.views.ChiefsView
 import com.example.practicas.views.DivitionsView
 import com.example.practicas.views.EagleView
 import com.example.practicas.views.HomeView
@@ -19,8 +21,10 @@ import com.example.practicas.views.NFCSoView
 import com.example.practicas.views.NFCView
 import com.example.practicas.views.NFCWeView
 import com.example.practicas.views.RamView
+import com.example.practicas.views.RavensView
 import com.example.practicas.views.SplashScreen
 import com.example.practicas.views.TBView
+import com.example.practicas.views.TexView
 
 @Composable
 fun NavManager(){
@@ -85,6 +89,18 @@ fun NavManager(){
         }
         composable (route = "Ea"){
             EagleView(navController)
+        }
+        composable (route = "Tex"){
+            TexView(navController)
+        }
+        composable (route = "CF"){
+            ChiefsView(navController)
+        }
+        composable (route = "Rav"){
+            RavensView(navController)
+        }
+        composable (route = "Bills"){
+            BillsView(navController)
         }
     }
 }

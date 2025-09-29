@@ -10,6 +10,8 @@ import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.shape.RoundedCornerShape
+import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.automirrored.filled.ArrowBack
 import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.CenterAlignedTopAppBar
 import androidx.compose.material3.ExperimentalMaterial3Api
@@ -26,6 +28,7 @@ import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavController
 import com.example.practicas.R
+import com.example.practicas.components.MainIconButton
 import com.example.practicas.components.TitleBar
 
 @OptIn(ExperimentalMaterial3Api::class)
@@ -38,7 +41,11 @@ fun NFCSoView(navController: NavController){
                 title = { TitleBar("Equipos")},
                 colors = TopAppBarDefaults.centerAlignedTopAppBarColors(
                     containerColor = Color.Blue
-                )
+                ), navigationIcon={
+                    MainIconButton(icon = Icons.AutoMirrored.Filled.ArrowBack){
+                        navController.popBackStack()
+                    }
+                }
             )
         }
     ) {

@@ -55,20 +55,21 @@ import kotlinx.coroutines.internal.OpDescriptor
 @OptIn(ExperimentalMaterial3Api::class)
 @SuppressLint("UnusedMaterial3ScaffoldPaddingParameter")
 @Composable
-fun EagleView(navController: NavController){
+fun ChiefsView(navController: NavController){
+
     Surface(
         modifier = Modifier.fillMaxSize(),
-        color = Color.White
+        color = Color.White,
     ) { }
-    EagleContentView(navController)
+    ChiefsContentView(navController)
 }
 
 @Composable
-fun CarruselIamgenesEa() {
+fun CarruselIamgenesChiefs() {
     val imagenes = listOf(
-        R.drawable._1jhzavy5k312csgzf3j,
-        R.drawable.attachment_gettyimages_21960942761,
-        R.drawable.eagles_super_bowl_recap
+        R.drawable.cf1,
+        R.drawable.cf2,
+        R.drawable.cf3
     )
 
     LazyRow (horizontalArrangement = Arrangement.spacedBy(16.dp),
@@ -82,23 +83,23 @@ fun CarruselIamgenesEa() {
 
 
 @Composable
-fun CarruselCartasEa() {
+fun CarruselCartasChiefs() {
     val cartas = listOf(
-        Juego(R.drawable.tampa_bay_buccaneers_logo_transparent, "Tampa Bay Buccaneers"),
-        Juego(R.drawable.denver_broncos_logo_transparent, "Denver Broncos"),
-        Juego(R.drawable.new_york_giants_logo_svg, "New York Giants"),
-        Juego(R.drawable.minnesota_vikings_logo_transparent, "Minnesota Vikings"),
-        Juego(R.drawable.green_bay_packers_logo_svg, "Green Bay Packers"),
+        Juego(R.drawable.baltimore_ravens_logo_transparent, "Baltimore Ravens"),
+        Juego(R.drawable.jacksonville_jaguars_logo_transparent, "Jacksonville Jaguars"),
         Juego(R.drawable.detroit_lions_logo_transparent, "Detroit Lions"),
-        Juego(R.drawable.dallas_cowboys_svg, "Dallas Cowboys"),
-        Juego(R.drawable.chicago_bears_logo, "Chicago Bears"),
-        Juego(R.drawable.los_angeles_chargers_logo_svg, "Los Angeles Chargers"),
         Juego(R.drawable.las_vegas_raiders_logo_1982, "Las Vegas Raiders"),
         Juego(R.drawable.washington_commanders_logo_svg, "Washington Commanders"),
         Juego(R.drawable.buffalo_bills_logo_transparent, "Buffalo Bills"),
-        Juego(R.drawable.washington_commanders_logo_svg, "Washington Commanders"),
+        Juego(R.drawable.denver_broncos_logo_transparent, "Denver Broncos"),
+        Juego(R.drawable.indianapolis_colts_logo_svg, "Indianapolis Colts"),
+        Juego(R.drawable.dallas_cowboys_svg, "Dallas Cowboys"),
+        Juego(R.drawable.houston_texans_logo_transparent, "Houston Texans"),
+        Juego(R.drawable.los_angeles_chargers_logo_svg, "Los Angeles Chargers"),
+        Juego(R.drawable.denver_broncos_logo_transparent, "Denver Broncos"),
+        Juego(R.drawable.las_vegas_raiders_logo_1982, "Las Vegas Raiders"),
 
-    )
+        )
 
     LazyRow (horizontalArrangement = Arrangement.spacedBy(16.dp),
         contentPadding = PaddingValues(horizontal = 16.dp)
@@ -117,11 +118,11 @@ fun CarruselCartasEa() {
 }
 
 @Composable
-fun CarruselCartas2Ea() {
+fun CarruselCartas2Chiefs() {
     val cartas = listOf(
-        Juego(R.drawable.dallas_cowboys_svg, "W 24-20 Dallas Cowboys"),
-        Juego(R.drawable.kansas_city_chiefs_logo_transparent, "W 20-17 Kansas City Chiefs"),
-        Juego(R.drawable.new_los_angeles_rams_logo_png_seeklogo_386951, "W 33-26 Los Angeles Rams")
+        Juego(R.drawable.los_angeles_chargers_logo_svg, "L 27-21 Los Angeles Chargers"),
+        Juego(R.drawable.philadelphia_eagles_logo, "L 20-17 Philadelphia Eagles"),
+        Juego(R.drawable.new_york_giants_logo_svg, "W 22-9 New York Giants")
     )
 
     LazyRow (horizontalArrangement = Arrangement.spacedBy(16.dp),
@@ -141,11 +142,11 @@ fun CarruselCartas2Ea() {
 }
 
 @Composable
-fun JugadoresEa() {
+fun JugadoresChiefs() {
     val cartas = listOf(
-        Juego(R.drawable.i__7_, "Jalen Hurts"),
-        Juego(R.drawable.i__8_, "Saquon Barkley"),
-        Juego(R.drawable.i__9_, "Jalen Carter")
+        Juego(R.drawable.cf6, "Patrick Mahomes"),
+        Juego(R.drawable.cf5, "Travis Kelce"),
+        Juego(R.drawable.cf4, "Chris Jones")
     )
 
     LazyRow (horizontalArrangement = Arrangement.spacedBy(16.dp),
@@ -168,26 +169,26 @@ fun JugadoresEa() {
 
 
 @Composable
-fun EagleContentView(navController: NavController) {
+fun ChiefsContentView(navController: NavController) {
     Box(modifier = Modifier.verticalScroll(rememberScrollState())) {
         Column(modifier = Modifier.fillMaxSize().padding(top = 40.dp),
             horizontalAlignment = Alignment.CenterHorizontally) {
             ElevatedCard(modifier = Modifier.width(350.dp), colors = CardDefaults.cardColors(containerColor = Color.White), shape = RoundedCornerShape(16.dp), elevation = CardDefaults.cardElevation(defaultElevation = 8.dp)) {
-                Text(text = "Philadelphia Eagles", fontSize = 35.sp, color = Color(0xFF000000), fontFamily = FontFamily.Serif, modifier = Modifier.align(
+                Text(text = "Kansas City Chiefs", fontSize = 35.sp, color = Color(0xFF000000), fontFamily = FontFamily.Serif, modifier = Modifier.align(
                     Alignment.CenterHorizontally))
 
             }
         }
 
         Box(modifier = Modifier.fillMaxSize().padding(top = 45.dp)){
-            CarruselIamgenesEa()
+            CarruselIamgenesChiefs()
         }
 
 
         Row(modifier = Modifier.fillMaxSize().padding(top = 445.dp),
             horizontalArrangement = Arrangement.Center) {
             ElevatedCard(modifier = Modifier.width(375.dp), colors = CardDefaults.cardColors(containerColor = Color.White), shape = RoundedCornerShape(16.dp), elevation = CardDefaults.cardElevation(defaultElevation = 8.dp)){
-                Text(text = "Con un roster cargado de talento en ambas líneas, los Eagles entran como candidatos fuertes. 2025 es la oportunidad de recuperar la cima tras un 2024 irregular. Su temporada será evaluada no por victorias, sino por su capacidad de llegar a febrero.", fontSize = 15.sp, color = Color(0xFF000000), fontFamily = FontFamily.Serif)
+                Text(text = "Con Mahomes, siempre estarán en la élite. Sin embargo, 2025 será un examen de profundidad: ¿pueden seguir dominando con receptores inexpertos y una defensa que a veces se queda corta? Mahomes tiene la capacidad de elevar a todos, pero no puede hacerlo solo eternamente.", fontSize = 15.sp, color = Color(0xFF000000), fontFamily = FontFamily.Serif)
 
             }
         }
@@ -196,7 +197,7 @@ fun EagleContentView(navController: NavController) {
             horizontalArrangement = Arrangement.Start) {
             ElevatedCard(modifier = Modifier.width(130.dp).height(50.dp),  colors = CardDefaults.cardColors(containerColor = Color.White), shape = RoundedCornerShape(16.dp), elevation = CardDefaults.cardElevation(defaultElevation = 8.dp)){
                 Box (modifier = Modifier.fillMaxSize(), contentAlignment = Alignment.Center){
-                    Text(text = "Record: 3-0", fontSize = 16.sp, color = Color(0xFF000000), fontFamily = FontFamily.Serif)
+                    Text(text = "Record: 1-2", fontSize = 16.sp, color = Color(0xFF000000), fontFamily = FontFamily.Serif)
                 }
             }
         }
@@ -204,7 +205,7 @@ fun EagleContentView(navController: NavController) {
             horizontalArrangement = Arrangement.End) {
             ElevatedCard(modifier = Modifier.width(245.dp).height(50.dp),  colors = CardDefaults.cardColors(containerColor = Color.White), shape = RoundedCornerShape(16.dp), elevation = CardDefaults.cardElevation(defaultElevation = 8.dp)){
                 Box (modifier = Modifier.fillMaxSize(), contentAlignment = Alignment.Center){
-                    Text(text = "Campeones de la NFL", fontSize = 16.sp, color = Color(0xFF000000), fontFamily = FontFamily.Serif)
+                    Text(text = "Campeones de la AFC Oeste", fontSize = 16.sp, color = Color(0xFF000000), fontFamily = FontFamily.Serif)
                 }
             }
         }
@@ -213,21 +214,21 @@ fun EagleContentView(navController: NavController) {
 
         Row(modifier = Modifier.fillMaxSize().padding(top = 625.dp),
             horizontalArrangement = Arrangement.Center) {
-            CarruselCartasEa()
+            CarruselCartasChiefs()
         }
 
         Text(text = "Resultados:", modifier = Modifier.fillMaxSize().padding(top = 770.dp))
 
         Row(modifier = Modifier.fillMaxSize().padding(top = 810.dp),
             horizontalArrangement = Arrangement.Center) {
-            CarruselCartas2Ea()
+            CarruselCartas2Chiefs()
         }
 
         Text(text = "Jugadores importantes:", modifier = Modifier.fillMaxSize().padding(top = 960.dp))
 
         Row(modifier = Modifier.fillMaxSize().padding(top = 1000.dp),
             horizontalArrangement = Arrangement.Center) {
-            JugadoresEa()
+            JugadoresChiefs()
         }
     }
 

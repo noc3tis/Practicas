@@ -93,7 +93,7 @@ fun NFCWeContentView(navController: NavController){
                 modifier = Modifier.size(100.dp).padding(0.dp, 0.dp, 15.dp, 0.dp)
             )
 
-            Text("Rams",  color = Color(0xFFF7EF8A))
+            Text("Rams",  color = Color.Yellow)
         }
         Spacer(modifier = Modifier.height(50.dp))
         OutlinedButton(onClick = {/*TODO*/}, colors = ButtonDefaults.buttonColors(containerColor = Color(0xFF97233F)), shape = RoundedCornerShape(10.dp),  border = BorderStroke(3.dp, Color(0xFF000000))) {

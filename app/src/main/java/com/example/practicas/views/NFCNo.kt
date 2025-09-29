@@ -93,7 +93,7 @@ fun NFCNoContentView(navController: NavController){
                 modifier = Modifier.size(100.dp).padding(0.dp, 0.dp, 15.dp, 0.dp)
             )
 
-            Text("Lions",  color = Color(0xFFF7EF8A))
+            Text("Lions",  color = Color.Yellow)
         }
         Spacer(modifier = Modifier.height(50.dp))
         OutlinedButton(onClick = {/*TODO*/}, colors = ButtonDefaults.buttonColors(containerColor = Color(0xFF203731)), shape = RoundedCornerShape(10.dp),  border = BorderStroke(3.dp, Color(0xFFFFB612))) {

@@ -93,7 +93,7 @@ fun NFCEaContentView(navController: NavController){
                 modifier = Modifier.size(100.dp).padding(0.dp, 0.dp, 15.dp, 0.dp)
             )
 
-            Text("Eagles",  color = Color(0xFFF7EF8A))
+            Text("Eagles",  color = Color.Yellow)
         }
         Spacer(modifier = Modifier.height(50.dp))
         OutlinedButton(onClick = {/*TODO*/}, colors = ButtonDefaults.buttonColors(containerColor = Color(0xFF0B2265)), shape = RoundedCornerShape(10.dp),  border = BorderStroke(3.dp, Color(0xFFa71930))) {

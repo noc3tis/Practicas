@@ -60,6 +60,8 @@ fun ContentHomeView(navController: NavController){
         horizontalAlignment = Alignment.CenterHorizontally
     ){
 
+
+
         OutlinedButton(onClick = { navController.navigate("DAFC") }, colors = ButtonDefaults.buttonColors(containerColor = Color.Red), shape = RoundedCornerShape(10.dp)) {
             Icon(
                 painter = painterResource(id = R.drawable.american_football_conference_logo_svg),
@@ -80,5 +82,6 @@ fun ContentHomeView(navController: NavController){
             )
             Text("Conferencia Nacional",  color = Color.White)
         }
+
     }
 }

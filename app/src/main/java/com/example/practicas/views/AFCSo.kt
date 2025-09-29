@@ -93,7 +93,7 @@ fun AFCSoContentView(navController: NavController){
                 modifier = Modifier.size(100.dp).padding(0.dp, 0.dp, 15.dp, 0.dp)
             )
 
-            Text("Texans",  color = Color(0xFFF7EF8A))
+            Text("Texans",  color = Color.Yellow)
         }
         Spacer(modifier = Modifier.height(50.dp))
         OutlinedButton(onClick = {/*TODO*/}, colors = ButtonDefaults.buttonColors(containerColor = Color(0xFF4B92DB)), shape = RoundedCornerShape(10.dp),  border = BorderStroke(3.dp, Color(0xFF8A8D8F))) {
